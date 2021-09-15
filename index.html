@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
     <title>Assignment-3</title>
 </head>
 <body>
@@ -34,6 +39,51 @@
     </li>      
     <li>Food </li>
 </ul>
+<hr>
+<h>Food and Drinks</h>
+<p>The Following Table illustrates the Best food and drinks available in different locations near me at the best price</p>
+<table>
+    <tr>
+        <th> Food/Drinks</th>
+        <th> Location </th>
+        <th> Price</th>
+    </tr>
+    <tr>
+        <td>Biryani</td>
+        <td>curry leaves </td>
+        <td>12$</td>
+    </tr>
+    <tr>
+        <td>Burger</td>
+        <td> Mc Donalds </td>
+        <td>1$</td>
+    </tr>
+    <tr>
+        <td>Chicken Nuggets</td>
+        <td> Mooyah</td>
+        <td>8$</td>
+    </tr>
+</table>
+<hr>
+<h2>Convex Hull</h2>
+<blockquote>The idea of this approach is to maintain a lower convex hull of linear functions. Actually it would be a bit more convenient to consider them not as linear functions, but as points (k;b) on the plane such that we will have to find the point which has the least dot product with a given point (x;1), that is, for this point kx+b is minimized which is the same as initial problem</blockquote><br>
+<a href="https://cp-algorithms.com/geometry/convex_hull_trick.html/">Source</a><br>
+<pre>
+    vector<point> hull, vecs;
+
+        void add_line(ftype k, ftype b) {
+            point nw = {k, b};
+            while(!vecs.empty() && dot(vecs.back(), nw - hull.back()) < 0) {
+                hull.pop_back();
+                vecs.pop_back();
+            }
+            if(!hull.empty()) {
+                vecs.push_back(1i * (nw - hull.back()));
+            }
+            hull.push_back(nw);
+        }
+        
+
 <a href=file:///C:/Users/S545258/OneDrive%20-%20nwmissouri.edu/Desktop/New%20folder/webapps-f21-assignment-3-S545258/aboutme.html>aboutme.html</a>
 </body>
 </html>
