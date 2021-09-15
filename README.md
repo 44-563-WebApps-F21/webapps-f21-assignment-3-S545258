@@ -1,3 +1,4 @@
 # WebApps-F21-Assignment-3
 Assignment 3 - Basic HTML
-This readme is created for assignment-3 
+This readme is created for assignment-3
+[Hosted at]( https://44-563-webapps-f21.github.io/webapps-f21-assignment-3-S545258/)
